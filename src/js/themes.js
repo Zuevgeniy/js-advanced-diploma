@@ -1,8 +1,16 @@
-const themes = {
-  prairie: 'prairie',
-  desert: 'desert',
-  arctic: 'arctic',
-  mountain: 'mountain',
-};
+export default class Themes {
+  constructor() {
+    this.themes = [
+      'prairie',
+      'desert',
+      'arctic',
+      'mountain',
+    ];
+  }
 
-export default themes;
+  * [Symbol.iterator]() {
+    const { length } = this.themes;
+
+    yield this.themes[Math.floor(Math.random() * length)];
+  }
+}

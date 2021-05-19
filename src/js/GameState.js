@@ -1,6 +1,11 @@
 export default class GameState {
-  static from(object) {
-    // TODO: create object
-    return null;
+  constructor(playerteam, enemyteam, positions) {
+    this.playerteam = playerteam;
+    this.enemyteam = enemyteam;
+    this.positions = positions;
+    this.stage = 'select';
+    this.level = 1;
+    this.score = 0;
+    this.topScore = 0;
   }
 }
